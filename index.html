@@ -1,0 +1,112 @@
+<DOCTYPE! html>
+<html>
+<head>
+<script type="text/javascript">
+
+var image1=new Image();
+image1.src="CivilWar.jpg";
+
+var image2=new Image();
+image2.src="DoctorStrange.jpg";
+
+var image3=new Image();
+image3.src="GoG2.jpg";
+
+var image4=new Image();
+image4.src="ThorRagnarok.jpg";
+
+var image5=new Image();
+image5.src="BlackPanther.jpg";
+
+var image6=new Image();
+image6.src="CaptainMarvel.jpg";
+
+var image7=new Image();
+image7.src="Inhumans.jpg";
+
+var image8=new Image();
+image8.src="InfinityWars.jpg";
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+    <body>
+        <h1>Simple Slideshow, Project 4</h1>
+
+        <p>With the recent announcement of "Phase 3" from Marvel during a "secret" press conference, I chose to do a slideshow which incorporates html, css, and some javascript, to beging building the hype that is to come from these new movies.</p>
+        <h2>Plus here is a neat little surprise ;)</h2>
+
+        <div class="moddedbutton">       
+        <button onclick="Mudkip()">HypeButton</button>
+        <p id="demo"></p>
+        </div>
+
+        <script>
+        function Mudkip(){
+            var Input = document.getElementById("demo").innerHTML = prompt("Are You Hyped???");
+                
+                if(Input === "yes"){
+                    prompt("Sweet! me too!!!");
+                       <!--  Was supposed to add a mudkip image, but unsuccessful =(
+
+                        $('#container').append($('<img>', { 
+                            src : "mudkip.jpg", 
+                            width : 400, 
+                            height : 400, 
+                            alt : "Mudkip Image", 
+                            title : "Mudkip Image"
+                        }));
+                        -->
+                }
+                else{
+                    for(i = 0; i < 1337; i++){
+                        var Inputtwo = prompt("Please Hype yourself up");
+                        if(Inputtwo === "ok"){
+                            i = 1337;
+                        }
+                        else{
+                            for (i = 0; i < 1000; i++){
+                                console.log("trolololol");
+                            }
+                        }
+                    }
+                }
+
+        }
+
+        </script>
+
+        <img src="CivilWar.jpg" name ="slide">
+        <!-- To do a slideshow, we change the image path after X amount of time -->
+
+<script type="text/javascript">
+
+var photocount = 1;
+
+function changeslide(){
+document.images.slide.src=eval("image" + photocount + ".src");
+
+    if(photocount < 8){
+        photocount++;
+    }
+    else{
+        photocount = 1;
+    }
+    setTimeout("changeslide()", 2500);
+}
+
+changeslide();
+
+</script>
+
+
+<p><a href="https://github.com/AvocadoTurtle/Project4JavaScript">Link to my Github</a></p>
+<p><a href="https://build.phonegap.com/apps/1113072/share">Link to my PhoneGap</a></p>
+
+</body>
+
+</html>
